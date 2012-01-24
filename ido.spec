@@ -16,6 +16,7 @@ Group:		System/Libraries
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		ido-0.3.1_gtk_box_new.patch
 Patch1:		ido-0.3.1_gtk_rc_parse_string.patch
+Patch2:		ido-0.3.1_gtk_widget_get_child_requisition.patch
 
 BuildRequires:	intltool
 BuildRequires:	gtk-doc
