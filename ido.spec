@@ -6,11 +6,11 @@
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
+Summary:	Provides extra GTK+ menu items
 Name:		ido
-Version:	0.3.1
+Version:	0.3.4
 Release:	1
 License:	LGPLv2.1, LGPLv3
-Summary:	Provides extra GTK+ menu items
 Url:		http://launchpad.net/ido
 Group:		System/Libraries
 Source0:	%{name}-%{version}.tar.gz
