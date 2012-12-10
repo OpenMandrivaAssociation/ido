@@ -65,3 +65,13 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/*.so
 
+
+
+%changelog
+* Fri Apr 06 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.3.4-1
++ Revision: 789535
+- removed unneeded patches
+- new version 0.3.4
+- added p2 to fix deprication in build
+- imported package ido
+
