@@ -62,12 +62,11 @@ This package provides the development files to build applications.
 
 %build
 export CFLAGS+=" -Wno-error"
-%configure2_5x \
+%configure \
 	--disable-static \
 	--enable-gtk-doc
 
-%make
+%make_build
 
 %install
-%makeinstall_std
-
+%make_install
