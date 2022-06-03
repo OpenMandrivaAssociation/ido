@@ -25,6 +25,7 @@ BuildRequires:  pkgconfig
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 
 %description
 This library provdes extra gtk menu items for display in system indicators.
