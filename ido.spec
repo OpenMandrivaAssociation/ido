@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %define api 3-0.1
 %define major 0
 
