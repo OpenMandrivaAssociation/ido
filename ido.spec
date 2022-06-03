@@ -61,7 +61,7 @@ This package provides the development files to build applications.
 %autosetup -c -p1
 
 %build
-autoreconf -vfi
+NOCONFIGURE=1 ./autogen.sh
 export CFLAGS+=" -Wno-error"
 %configure \
 	--disable-static \
