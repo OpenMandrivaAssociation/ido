@@ -65,7 +65,8 @@ autoreconf -vfi
 export CFLAGS+=" -Wno-error"
 %configure \
 	--disable-static \
-	--enable-gtk-doc
+	--enable-gtk-doc \
+	--disable-introspection
 
 %make_build
 
