@@ -58,7 +58,7 @@ This package provides the development files to build applications.
 #----------------------------------------------------------------------------
 
 %prep
-%autopatch -c -p1
+%autosetup -c -p1
 
 %build
 export CFLAGS+=" -Wno-error"
