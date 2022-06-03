@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %define api 3-0.1
 %define major 0
 
@@ -7,7 +9,7 @@
 Summary:	Provides extra GTK+ menu items
 Name:		ido
 Version:	12.10.2
-Release:	2
+Release:	3
 License:	LGPLv3+
 Group:		System/Libraries
 Url:		http://launchpad.net/ido
@@ -59,12 +61,12 @@ This package provides the development files to build applications.
 %autopatch -p1
 
 %build
-%configure2_5x \
+export CFLAGS+=" -Wno-error"
+%configure \
 	--disable-static \
 	--enable-gtk-doc
 
-%make
+%make_build
 
 %install
-%makeinstall_std
-
+%make_install
