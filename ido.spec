@@ -59,6 +59,7 @@ This package provides the development files to build applications.
 %autopatch -p1
 
 %build
+export CFLAGS+=" -Wno-error"
 %configure2_5x \
 	--disable-static \
 	--enable-gtk-doc
