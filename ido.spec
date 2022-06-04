@@ -15,6 +15,8 @@ Group:		System/Libraries
 Url:		http://launchpad.net/ido
 #Source0:	https://launchpad.net/ido/12.10/%{version}/+download/%{name}-%{version}.tar.gz
 Source0:	https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ido/13.10.0+17.04.20161028-0ubuntu3/ido_13.10.0+17.04.20161028.orig.tar.gz
+# Make Ubuntu GTK+ Private API optional.
+Patch0:         ido-optional-ubuntu-private.patch
 
 BuildRequires:	gnome-common
 BuildRequires:	intltool
