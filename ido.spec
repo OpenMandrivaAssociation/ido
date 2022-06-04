@@ -8,16 +8,26 @@
 
 Summary:	Provides extra GTK+ menu items
 Name:		ido
-Version:	12.10.2
-Release:	3
+Version:	13.10.0
+Release:	1
 License:	LGPLv3+
 Group:		System/Libraries
 Url:		http://launchpad.net/ido
-Source0:	https://launchpad.net/ido/12.10/%{version}/+download/%{name}-%{version}.tar.gz
+#Source0:	https://launchpad.net/ido/12.10/%{version}/+download/%{name}-%{version}.tar.gz
+Source0:	https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ido/13.10.0+17.04.20161028-0ubuntu3/ido_13.10.0+17.04.20161028.orig.tar.gz
+# Make Ubuntu GTK+ Private API optional.
+Patch0:         ido-optional-ubuntu-private.patch
+
+BuildRequires:	gnome-common
 BuildRequires:	intltool
+BuildRequires:  autoconf
+BuildRequires:  automake
+BuildRequires:  libtool
+BuildRequires:  pkgconfig
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 
 %description
 This library provdes extra gtk menu items for display in system indicators.
@@ -57,14 +67,16 @@ This package provides the development files to build applications.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -c -p1
 
 %build
+NOCONFIGURE=1 ./autogen.sh
 export CFLAGS+=" -Wno-error"
 %configure \
 	--disable-static \
-	--enable-gtk-doc
+	--enable-gtk-doc \
+	--disable-introspection \
+	--disable-ubuntu-private-api
 
 %make_build
 
