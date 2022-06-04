@@ -75,7 +75,8 @@ export CFLAGS+=" -Wno-error"
 %configure \
 	--disable-static \
 	--enable-gtk-doc \
-	--disable-introspection
+	--disable-introspection \
+	--disable-ubuntu-private-api
 
 %make_build
 
