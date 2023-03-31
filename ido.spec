@@ -9,7 +9,7 @@
 Summary:	Provides extra GTK+ menu items
 Name:		ido
 Version:	13.10.0
-Release:	2
+Release:	3
 License:	LGPLv3+
 Group:		System/Libraries
 Url:		http://launchpad.net/ido
