@@ -18,6 +18,8 @@ Source0:	https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ido/13.10.0+
 # Make Ubuntu GTK+ Private API optional.
 Patch0:         ido-optional-ubuntu-private.patch
 
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	gnome-common
 BuildRequires:	intltool
 BuildRequires:  autoconf
